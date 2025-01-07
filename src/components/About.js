@@ -1,32 +1,53 @@
 // src/components/About.js
 import React from 'react';
+import { Breadcrumb } from 'react-bootstrap';
+import bgBreadcrumb from '../images/bg-breadcrumb.png';
 import '../../src/styles.css';
+import about from '../../src/images/about.jpg';
 
 const About = () => {
     return (
-        <div className="about-container">
-         <h2 style={{ textAlign: 'center' }}>About Us</h2>
-            <div className="about-grid">
-                <div className="about-image">
-                    <img
-                        className="d-block w-100"
-                        src="https://via.placeholder.com/800x400?text=First+Slide"
-                        alt="First slide"
-                    />
-                </div>
-                <div className="about-text">
-                   
-                    <p>
-                        Blue Chopstix- Hakka Chinese and Thai restaurant located in Guelph,
-                        Ontario opened its doors on November 18th, 2017 and is family owned and managed by a team of Chefs that have years of experience in Hakka Chinese and Thai cuisine.
-                        We offer Hakka Chinese and Thai food cooked with your choice of meats like Chicken, Beef, Seafood and also have a whole lot of vegetarian options.
-                        We are striving to meet your expectations for good quality food by sourcing for the freshest ingredients and meats. Our meat is Halal Certified Hand cut.
-                        We buy our meats from http://sargentfarms.ca/halal-by-hand/ Sargent Farm’s strong commitment to the Muslim community and their halal process is reinforced by their Halal Monitoring Authority (HMA) certification.
-                        A representative of the HMA is on site at all times during the processing of their chicken and beef. We would like to take this moment to thank the Guelph community for their support and we welcome all patrons to come dine in with us and enjoy the cozy setting of our Hakka Restaurant in Guelph.
-                        We have a very family-friendly atmosphere and we are always thrilled to cater to kids of all ages. We are a small establishment and we look forward to catering to your tastes. We generally keep our spice levels low, so if you are the kind who likes a little kick from spices, we request you to inform us before you order your food.
-                        Thank you for considering Blue Chopstix Restaurant for your next appetite cravings in Hakka Chinese and Thai food. We are conveniently located at the intersection of Silver Creek and Speedway in Guelph, Ontario. We are 7 minutes away from Downtown Guelph and 10 minutes away from University of Guelph.
-                        We are also 30 minutes away from Kitchener, Ontario and 30 minutes away from Milton, Ontario.
-                    </p>
+        <div>
+            {/* Breadcrumb with Background Image */}
+            <div className="breadcrumb-container" style={{ backgroundImage: `url(${bgBreadcrumb})` }}>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>About</Breadcrumb.Item>
+                </Breadcrumb>
+            </div>
+            <div className="container">
+                 
+           
+                <div className="about-grid row">
+                    <div className="col-12 col-xl-6col-md-6 col-sm-6">
+                        
+                    <div class="about-image">
+                
+                        <img className="img-fluid svg-clip-image" src={about} alt="The Deccani Nawab about" />
+                    </div>
+                    </div>
+
+                    <div className="col-12 col-xl-6col-md-6 col-sm-6">
+                        <div className="about-text">
+                            {/* Page Header */}
+                            <div class="headings">
+                                <h2 style={{ textAlign: 'left' }}>About Us</h2>
+                            </div> 
+                            <p>
+                            Welcome to our haven of flavors, where we bring together the best of Hakka Chinese and Thai cuisine! At our restaurant, we take pride in offering a diverse menu tailored to suit all taste preferences. Whether you’re craving tender Chicken, savory Beef, fresh Seafood, or an array of delicious vegetarian options, we have something special for everyone.
+
+<br></br>Quality is at the heart of everything we do. We carefully source the freshest ingredients and meats to ensure every dish bursts with authentic flavor. For our valued guests seeking Halal options, rest assured that all our meats are hand-cut and Halal Certified.
+
+Our cozy, family-friendly atmosphere is perfect for dining with loved ones of all ages. We love seeing kids enjoy our dishes just as much as the grown-ups, and we’re committed to creating a warm, welcoming environment for everyone.
+
+<br></br>Understanding that every palate is unique, we keep our spice levels mild to cater to a broad audience. If you prefer your meal with a fiery kick, let us know, and we’ll gladly spice it up to match your taste!
+
+As a small, passionate establishment, we look forward to delighting you with our culinary creations. Your satisfaction is our top priority, and we are dedicated to meeting your expectations for exceptional quality and service.
+
+<br></br>Thank you for choosing us to embark on this flavorful journey. We can’t wait to serve you and share the joy of good food together!
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

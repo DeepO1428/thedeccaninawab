@@ -13,14 +13,14 @@ section {
 /* Heading styles */
 h2 {
     font-size: 24px;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 /* Paragraph styles */
 p {
     font-size: 16px;
-    color: #666;
+    color: #fff;
     line-height: 1.5;
 }
 
@@ -39,18 +39,7 @@ p {
     }
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.gallery img {
-    margin: 10px;
-    width: 300px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: for rounded corners */
-}
 
 /* Form container styles */
 .form-container {

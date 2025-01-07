@@ -4,7 +4,12 @@ import Swal from 'sweetalert2';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../../src/styles.css';
+import '../../src/responsive.css';
+import banner1 from '../images/banner1.png';
+import banner2 from '../images/banner2.png';
+import banner3 from '../images/banner3.png';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import Services from './Services'; // Import Services component
 
 const Menu = () => {
     const menuItems = [
@@ -56,23 +61,23 @@ const Menu = () => {
 
     return (
         <div>
-            <div className="carousel-wrapper">
+            <div className="carousel-wrapper banner-crousel">
                 <Carousel>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/800x400?text=Second+Slide"
+                            src={banner1}
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>Welcome to Our Menu</h3>
+                            <h3>Welcome to the Deccani Nawab</h3>
                             <p>Explore our delicious offerings!</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/800x400?text=Second+Slide"
+                            src={banner2}
                             alt="Second slide"
                         />
                         <Carousel.Caption>
@@ -83,28 +88,36 @@ const Menu = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/800x400?text=Third+Slide"
+                            src={banner3}
                             alt="Third slide"
                         />
                         <Carousel.Caption>
                             <Link to="/contact">
-                                <h3>Order Now!</h3>
+                                <h3>Place An order Here!</h3>
                             </Link>
                             <p>Don't miss out on our special offers!</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <h2 style={{ textAlign: 'center' }}>Our Menu</h2>
-            <div className="menu-grid">
-                {menuItems.map((item, index) => (
-                    <div className="menu-item" key={index}>
-                        <img src={item.image} alt={item.name} style={{ width: '100%', borderRadius: '8px' }} />
-                        <span>{item.name}</span>
-                        <button onClick={() => handleBuyNow(item.name)}>Buy Now</button>
-                    </div>
-                ))}
+            <div class="headings">
+                <h2 style={{ textAlign: 'center' }}>Our Menu</h2>
             </div>
+            
+            <div className="container pb-5">
+                <div className="menu-grid">
+                    {menuItems.map((item, index) => (
+                        <div className="menu-item" key={index}>
+                            <img src={item.image} alt={item.name} style={{ width: '100%', borderRadius: '8px' }} />
+                            <span>{item.name}</span>
+                            <button class="btn btn-primary" onClick={() => handleBuyNow(item.name)}>Order Now</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Services Section */}
+            <Services /> {/* Add Services component here */}
         </div>
     );
 };

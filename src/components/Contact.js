@@ -1,5 +1,7 @@
 // src/components/Contact.js
 import React, { useState } from 'react';
+import { Breadcrumb } from 'react-bootstrap';
+import bgBreadcrumb from '../images/bg-breadcrumb.png';
 import '../../src/styles.css';
 
 const Contact = () => {
@@ -45,95 +47,85 @@ const Contact = () => {
 
     return (
         <div>
-            <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
-            <div className="form-container">
-                <form onSubmit={handleContactSubmit} className="contact-form">
-                    <h3>Contact Form</h3>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={contactInfo.name}
-                        onChange={handleContactChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={contactInfo.email}
-                        onChange={handleContactChange}
-                        required
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Your Message"
-                        value={contactInfo.message}
-                        onChange={handleContactChange}
-                        required
-                    />
-                    <button type="submit">Send Message</button>
-                </form>
-
-                <form onSubmit={handleReservationSubmit} className="reservation-form">
-                    <h3>Reservation Form</h3>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={reservationInfo.name}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={reservationInfo.email}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="contact"
-                        placeholder="Your Contact Number"
-                        value={reservationInfo.contact}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <input
-                        type="date"
-                        name="date"
-                        placeholder="Reservation Date"
-                        value={reservationInfo.date}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <input
-                        type="time"
-                        name="time"
-                        placeholder="Reservation Time"
-                        value={reservationInfo.time}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <input
-                        type="number"
-                        name="guests"
-                        placeholder="Number of Guests"
-                        value={reservationInfo.guests}
-                        onChange={handleReservationChange}
-                        required
-                    />
-                    <textarea
-                        name="specialRequests"
-                        placeholder="Special Requests"
-                        value={reservationInfo.specialRequests}
-                        onChange={handleReservationChange}
-                    />
-                    <button type="submit">Make Reservation</button>
-                </form>
+             {/* Breadcrumb with Background Image */}
+             <div className="breadcrumb-container" style={{ backgroundImage: `url(${bgBreadcrumb})` }}>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Contact US</Breadcrumb.Item>
+                </Breadcrumb>
             </div>
+
+            <div class="container">
+                
+                <div className="row">
+                    <div className="col-12 col-xl-6 col-md-6 col-sm-6">
+                        <h2  class="head-txt" style={{ textAlign: 'center' }}>Make a <br></br> Reservation</h2>
+                    </div>
+
+
+                    <div className="col-12 col-xl-6 col-md-6 col-sm-6">
+                        <form onSubmit={handleReservationSubmit} className="reservation-form">
+                            <h3>Reservation Form</h3>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={reservationInfo.name}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                value={reservationInfo.email}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="contact"
+                                placeholder="Your Contact Number"
+                                value={reservationInfo.contact}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <input
+                                type="date"
+                                name="date"
+                                placeholder="Reservation Date"
+                                value={reservationInfo.date}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <input
+                                type="time"
+                                name="time"
+                                placeholder="Reservation Time"
+                                value={reservationInfo.time}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <input
+                                type="number"
+                                name="guests"
+                                placeholder="Number of Guests"
+                                value={reservationInfo.guests}
+                                onChange={handleReservationChange}
+                                required
+                            />
+                            <textarea
+                                name="specialRequests"
+                                placeholder="Special Requests"
+                                value={reservationInfo.specialRequests}
+                                onChange={handleReservationChange}
+                            />
+                            <button type="submit">Make Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     );
 };

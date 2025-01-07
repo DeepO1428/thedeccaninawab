@@ -1,6 +1,8 @@
 // src/components/MainMenu.js
 import React from 'react';
 import Swal from 'sweetalert2';
+import { Breadcrumb } from 'react-bootstrap';
+import bgBreadcrumb from '../images/bg-breadcrumb.png';
 import '../../src/styles.css';
 
 const MainMenu = () => {
@@ -52,17 +54,27 @@ const MainMenu = () => {
     };
 
     return (
-        <div>
-            <h2 style={{ textAlign: 'center' }}>Our Menu</h2>
-            <div className="menu-grid">
-                {menuItems.map((item, index) => (
-                    <div className="menu-item" key={index}>
-                        <img src={item.image} alt={item.name} style={{ width: '100%', borderRadius: '8px' }} />
-                        <span>{item.name}</span>
-                        <button onClick={() => handleBuyNow(item.name)}>Buy Now</button>
-                    </div>
-                ))}
+        <div class="menu-section">
+            {/* Breadcrumb with Background Image */}
+            <div className="breadcrumb-container" style={{ backgroundImage: `url(${bgBreadcrumb})` }}>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Our Menu</Breadcrumb.Item>
+                </Breadcrumb>
             </div>
+            <div class="container">
+                <h2  class="menu-section" style={{ textAlign: 'center' }}>Our Menu</h2>
+                <div className="menu-grid">
+                    {menuItems.map((item, index) => (
+                        <div className="menu-item" key={index}>
+                            <img src={item.image} alt={item.name} style={{ width: '100%', borderRadius: '8px' }} />
+                            <span>{item.name}</span>
+                            <button onClick={() => handleBuyNow(item.name)}>Buy Now</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
         </div>
     );
 };
