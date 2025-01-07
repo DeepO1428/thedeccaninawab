@@ -1,6 +1,5 @@
 // src/components/Menu.js
 import React from 'react';
-import Swal from 'sweetalert2';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../../src/styles.css';
@@ -26,37 +25,8 @@ const Menu = () => {
         { name: "Noodle Roll", image: "https://via.placeholder.com/150?text=Noodle+Roll" }
     ];
 
-    const handleBuyNow = (item) => {
-        Swal.fire({
-            title: `Order ${item}`,
-            html: `
-                <input id="name" class="swal2-input" placeholder="Your name">
-                <input id="email" class="swal2-input" placeholder="Your email">
-                <input id="contact" class="swal2-input" placeholder="Your contact number">
-                <input id="address" class="swal2-input" placeholder="Full address">
-                <textarea id="instructions" class="swal2-textarea" placeholder="Special instructions"></textarea>
-            `,
-            focusConfirm: false,
-            showCancelButton: true,
-            confirmButtonText: 'Order Now',
-            cancelButtonText: 'Cancel',
-            preConfirm: () => {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const contact = document.getElementById('contact').value;
-                const instructions = document.getElementById('instructions').value;
-                const address = document.getElementById('address').value;
-
-                if (!name || !email || !contact || !address) {
-                    Swal.showValidationMessage('Please fill in all required fields');
-                }
-                return { name, email, contact, instructions, address };
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(`Thank you, ${result.value.name}! Your order for ${item} has been placed. We will contact you at ${result.value.contact}.`);
-            }
-        });
+    const handleBuyNow = () => {
+        window.location.href = 'https://www.foodbooking.com/api/fb/p_g_w3_d';
     };
 
     return (
@@ -100,7 +70,7 @@ const Menu = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <div class="headings">
+            <div className="headings">
                 <h2 style={{ textAlign: 'center' }}>Our Menu</h2>
             </div>
             
@@ -110,14 +80,13 @@ const Menu = () => {
                         <div className="menu-item" key={index}>
                             <img src={item.image} alt={item.name} style={{ width: '100%', borderRadius: '8px' }} />
                             <span>{item.name}</span>
-                            <button class="btn btn-primary" onClick={() => handleBuyNow(item.name)}>Order Now</button>
+                            <button className="btn btn-primary" onClick={handleBuyNow}>Order Now</button>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Services Section */}
-            <Services /> {/* Add Services component here */}
+            <Services />
         </div>
     );
 };

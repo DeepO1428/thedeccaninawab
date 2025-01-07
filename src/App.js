@@ -1,7 +1,6 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import About from './components/About';
@@ -27,7 +26,14 @@ const App = () => {
                 </Routes>
                 <Footer />
                 <div className="order-now-container">
-                    <Link to="/order" className="main-button">Order Now!</Link>
+                    <a 
+                        href="https://www.foodbooking.com/api/fb/p_g_w3_d"
+                        className="main-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Order Now!
+                    </a>
                 </div>
             </div>
         </Router>

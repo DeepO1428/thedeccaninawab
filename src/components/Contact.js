@@ -5,12 +5,6 @@ import bgBreadcrumb from '../images/bg-breadcrumb.png';
 import '../../src/styles.css';
 
 const Contact = () => {
-    const [contactInfo, setContactInfo] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-
     const [reservationInfo, setReservationInfo] = useState({
         name: '',
         email: '',
@@ -21,21 +15,9 @@ const Contact = () => {
         specialRequests: ''
     });
 
-    const handleContactChange = (e) => {
-        const { name, value } = e.target;
-        setContactInfo({ ...contactInfo, [name]: value });
-    };
-
     const handleReservationChange = (e) => {
         const { name, value } = e.target;
         setReservationInfo({ ...reservationInfo, [name]: value });
-    };
-
-    const handleContactSubmit = (e) => {
-        e.preventDefault();
-        console.log('Contact Info:', contactInfo);
-        alert('Thank you for contacting us!');
-        setContactInfo({ name: '', email: '', message: '' }); // Reset form
     };
 
     const handleReservationSubmit = (e) => {
