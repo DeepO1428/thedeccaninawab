@@ -29,7 +29,7 @@ const Header = () => {
                     <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
                     <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
                     <li><Link to="/Main" onClick={() => setMenuOpen(false)}>Menu</Link></li>
-                    <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+                    <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Make Reservation</Link></li>
                     <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Photo Gallery</Link></li>
                 </ul>
             </nav>

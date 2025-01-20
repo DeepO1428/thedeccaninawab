@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import MainMenu from './components/MainMenu';
 import Services from './components/Services';
 import './App.css';
+import './responsive.css';
 
 const App = () => {
     return (

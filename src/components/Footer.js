@@ -12,9 +12,9 @@ const Footer = () => {
                         <img className="img-fluid" src={logo} alt="The Deccani Nawab Logo" />
                     </div>
                     <div className="footer-contact">
-                        <p><FaPhoneAlt /> +1 (123) 456-7890</p>
+                        <p><FaPhoneAlt /> +1 905-618-1717</p>
                         <p><FaEnvelope /> info@deccaninaweb.com</p>
-                        <p><FaMapMarkerAlt /> 123 Deccani Street, Toronto, ON</p>
+                        <p><FaMapMarkerAlt />1133 Dundas St. East,Mississauga</p>
                     </div>
                     <div className="footer-social">
                         <h4>Follow Us</h4>
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <p>
-                    Copyright © 2024. All Rights Reserved By <i>The Deccani Nawab.</i>
+                    Copyright © {new Date().getFullYear()}. All Rights Reserved By <i>The Deccani Nawab.</i>
                 </p>
             </div>
 

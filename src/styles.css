@@ -440,15 +440,15 @@ form button {
     text-transform: uppercase;
 }
 form.reservation-form {
-    background: #121212;
-    border: 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 0 !important;
     margin: 3rem 1rem;
     padding: 4rem 3rem;
-    box-shadow: 0 0 20px #717171;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 form.reservation-form h3 {
-    color: #fff;
+    color: #333333;
     text-transform: uppercase;
     font-size: 25px;
 }
@@ -470,23 +470,25 @@ h2.head-txt {
 }
 form.reservation-form input, form.reservation-form textarea{
     width: 100%;
-  margin: 0 0 15px;
-  padding: 13px 24px;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: inherit;
-  font-weight: 400;
-  color: #636363;
-  background-color: transparent;
-  border: 1px solid #636363;
-  border-radius: 0;
-  outline: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: border-color .2s ease-in-out;
-  -moz-transition: border-color .2s ease-in-out;
-  transition: border-color .2s ease-in-out
+    margin: 0 0 15px;
+    padding: 13px 24px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: inherit;
+    font-weight: 400;
+    color: #333333;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    outline: 0;
+    box-sizing: border-box;
+    transition: border-color .2s ease-in-out;
+}
+
+form.reservation-form input:focus, 
+form.reservation-form textarea:focus {
+    border-color: #f4b420;
+    background-color: #ffffff;
 }
 
 
@@ -640,6 +642,73 @@ form.reservation-form input, form.reservation-form textarea{
 
 .order-now-btn:hover {
     background-color: #d9a818;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.reservation-form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* SweetAlert2 Custom Styles */
+.swal2-popup {
+    border-radius: 0 !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.swal2-title {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+
+.swal2-html-container {
+    font-size: 16px !important;
+}
+
+.swal2-confirm {
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.swal2-confirm:focus {
+    box-shadow: none !important;
+}
+
+/* Add these styles for the time input */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+input[type="time"] {
+    position: relative;
+    padding-right: 40px; /* Make space for the time picker icon */
+}
+
+/* Ensure consistent styling across browsers */
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+    padding-right: 20px;
+}
+
+input[type="time"]::-webkit-clear-button {
+    display: none;
 }
 
 
