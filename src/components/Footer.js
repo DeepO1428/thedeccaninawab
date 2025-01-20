@@ -13,14 +13,14 @@ const Footer = () => {
                     </div>
                     <div className="footer-contact">
                         <p><FaPhoneAlt /> +1 905-618-1717</p>
-                        <p><FaEnvelope /> info@deccaninaweb.com</p>
-                        <p><FaMapMarkerAlt />1133 Dundas St. East,Mississauga</p>
+                        <p><FaEnvelope /> thedeccaninawab@gmail.com</p>
+                        <p><FaMapMarkerAlt /> 1133 Dundas St. East,Mississauga</p>
                     </div>
                     <div className="footer-social">
                         <h4>Follow Us</h4>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                        <a href="https://www.facebook.com/thedeccaninawab/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                        <a href="https://www.instagram.com/thedeccaninawab/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                       
                     </div>
                 </div>
             </div>
