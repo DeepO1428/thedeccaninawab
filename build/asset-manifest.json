@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.124bc72c.css",
-    "main.js": "/static/js/main.3333f6c5.js",
+    "main.js": "/static/js/main.be9dd968.js",
     "static/js/453.e55345d8.chunk.js": "/static/js/453.e55345d8.chunk.js",
     "static/media/menu-decani.pdf": "/static/media/menu-decani.9855c77192c912cee78b.pdf",
     "static/media/banner2.png": "/static/media/banner2.d8a8c27a7296849959dd.png",
@@ -22,11 +22,11 @@
     "static/media/meeting.png": "/static/media/meeting.66be0d383a08acb51ca2.png",
     "index.html": "/index.html",
     "main.124bc72c.css.map": "/static/css/main.124bc72c.css.map",
-    "main.3333f6c5.js.map": "/static/js/main.3333f6c5.js.map",
+    "main.be9dd968.js.map": "/static/js/main.be9dd968.js.map",
     "453.e55345d8.chunk.js.map": "/static/js/453.e55345d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.124bc72c.css",
-    "static/js/main.3333f6c5.js"
+    "static/js/main.be9dd968.js"
   ]
 }
