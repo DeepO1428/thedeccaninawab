@@ -111,79 +111,100 @@ const Contact = () => {
                 </Breadcrumb>
             </div>
 
-            <div class="container">
-                
-                <div className="row">
-                    <div className="col-12 col-xl-6 col-md-6 col-sm-6">
-                        <h2  class="head-txt" style={{ textAlign: 'center' }}>Make a <br></br> Reservation</h2>
-                    </div>
+            <section className="reservation-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-xl-6 col-md-6 col-sm-6">
+                            <h1 className="head-txt" style={{ textAlign: 'center' }}>
+                                Make a <br /> Reservation
+                            </h1>
+                        </div>
 
-
-                    <div className="col-12 col-xl-6 col-md-6 col-sm-6">
-                        <form onSubmit={handleReservationSubmit} className="reservation-form">
-                            <h3>Reservation Form</h3>
-                            {error && <div className="error-message">{error}</div>}
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Your Name"
-                                value={reservationInfo.name}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Your Email"
-                                value={reservationInfo.email}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <input
-                                type="text"
-                                name="contact"
-                                placeholder="Your Contact Number"
-                                value={reservationInfo.contact}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <input
-                                type="date"
-                                name="date"
-                                placeholder="Reservation Date"
-                                value={reservationInfo.date}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <input
-                                type="time"
-                                name="time"
-                                placeholder="Reservation Time"
-                                value={reservationInfo.time}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <input
-                                type="number"
-                                name="guests"
-                                placeholder="Number of Guests"
-                                value={reservationInfo.guests}
-                                onChange={handleReservationChange}
-                                required
-                            />
-                            <textarea
-                                name="specialRequests"
-                                placeholder="Special Requests"
-                                value={reservationInfo.specialRequests}
-                                onChange={handleReservationChange}
-                            />
-                            <button type="submit" disabled={loading}>
-                                {loading ? 'Sending...' : 'Make Reservation'}
-                            </button>
-                        </form>
+                        <div className="col-12 col-xl-6 col-md-6 col-sm-6">
+                            <form 
+                                onSubmit={handleReservationSubmit} 
+                                className="reservation-form"
+                                aria-label="Reservation form"
+                            >
+                                <h2>Reservation Form</h2>
+                                {error && (
+                                    <div className="error-message" role="alert">
+                                        {error}
+                                    </div>
+                                )}
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    value={reservationInfo.name}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Your name"
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your Email"
+                                    value={reservationInfo.email}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Your email"
+                                />
+                                <input
+                                    type="text"
+                                    name="contact"
+                                    placeholder="Your Contact Number"
+                                    value={reservationInfo.contact}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Your contact number"
+                                />
+                                <input
+                                    type="date"
+                                    name="date"
+                                    placeholder="Reservation Date"
+                                    value={reservationInfo.date}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Reservation date"
+                                />
+                                <input
+                                    type="time"
+                                    name="time"
+                                    placeholder="Reservation Time"
+                                    value={reservationInfo.time}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Reservation time"
+                                />
+                                <input
+                                    type="number"
+                                    name="guests"
+                                    placeholder="Number of Guests"
+                                    value={reservationInfo.guests}
+                                    onChange={handleReservationChange}
+                                    required
+                                    aria-label="Number of guests"
+                                />
+                                <textarea
+                                    name="specialRequests"
+                                    placeholder="Special Requests"
+                                    value={reservationInfo.specialRequests}
+                                    onChange={handleReservationChange}
+                                    aria-label="Special requests"
+                                />
+                                <button 
+                                    type="submit" 
+                                    disabled={loading}
+                                    aria-busy={loading}
+                                >
+                                    {loading ? 'Sending...' : 'Make Reservation'}
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             
         </div>
     );

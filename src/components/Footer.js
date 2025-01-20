@@ -29,8 +29,6 @@ const Footer = () => {
                     Copyright © {new Date().getFullYear()}. All Rights Reserved By <i>The Deccani Nawab.</i>
                 </p>
             </div>
-
-           
         </footer>
     );
 };

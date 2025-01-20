@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Deccani Nawab",
+  "name": "The Deccani Nawab - Authentic Hyderabadi Restaurant",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#f4b420",
+  "background_color": "#ffffff",
+  "description": "Authentic Hyderabadi restaurant serving traditional Nawabi cuisine, biryani, kebabs, and more."
 }

@@ -11,9 +11,9 @@ const Header = () => {
     };
 
     return (
-        <header className="sticky-header deccani-head">
-            <div className="header-title">
-                <h1>The <b>Deccani</b> Nawab</h1>
+        <header className="sticky-header">
+            <div className="deccani-head">
+                <h1>The Deccani <b>Nawab</b></h1>
             </div>
 
             {/* Burger Menu Icon */}

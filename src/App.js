@@ -15,7 +15,7 @@ import './responsive.css';
 const App = () => {
     return (
         <Router>
-            <div>
+            <div className="App">
                 <Header />
                 <Routes>
                     <Route path="/" element={<Menu />} />
