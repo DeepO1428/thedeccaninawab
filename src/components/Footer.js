@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../src/styles.css';
-import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import logo from '../../src/images/images.jpg'; // Update the path to your image file
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="footer-contact">
                         <p><FaPhoneAlt /> +1 905-618-1717</p>
                         <p><FaEnvelope /> thedeccaninawab@gmail.com</p>
-                        <p><FaMapMarkerAlt /> 1133 Dundas St. East,Mississauga</p>
+                        <p><FaMapMarkerAlt />  1133 Dundas St. East,Mississauga</p>
                     </div>
                     <div className="footer-social">
                         <h4>Follow Us</h4>

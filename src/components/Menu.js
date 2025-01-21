@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom';
 import '../../src/styles.css';
 import '../../src/responsive.css';
 import banner1 from '../images/banner1.png';
-import banner2 from '../images/banner2.png';
+import banner2 from '../images/banner4.png';
 import banner3 from '../images/banner3.png';
+import menuFront from '../images/menufront.jpg';
+import menuBack from '../images/menuback.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import Services from './Services'; // Import Services component
 
 const Menu = () => {
-    const menuItems = [
+    {/*const menuItems = [
         { name: "Mango Shake", image: "https://via.placeholder.com/150?text=Mango+Shake" },
         { name: "Oreo Shake", image: "https://via.placeholder.com/150?text=Oreo+Shake" },
         { name: "Fudge", image: "https://via.placeholder.com/150?text=Fudge" },
@@ -23,7 +25,26 @@ const Menu = () => {
         { name: "Noodle Burger", image: "https://via.placeholder.com/150?text=Noodle+Burger" },
         { name: "Crispy Zinger Burger", image: "https://via.placeholder.com/150?text=Crispy+Zinger+Burger" },
         { name: "Noodle Roll", image: "https://via.placeholder.com/150?text=Noodle+Roll" }
-    ];
+    ];*/}
+
+    // Function to handle zoom effect on mouse move
+    const handleMouseMove = (e) => {
+        const img = e.target;
+        const rect = img.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100; // X-coordinate in percentage
+        const y = ((e.clientY - rect.top) / rect.height) * 100; // Y-coordinate in percentage
+        img.style.transformOrigin = `${x}% ${y}%`; // Set transform origin dynamically
+        img.style.transform = "scale(2)"; // Zoom in effect
+    };
+
+    // Function to reset zoom effect when mouse leaves
+    const handleMouseLeave = (e) => {
+        const img = e.target;
+        img.style.transformOrigin = "center center"; // Reset origin
+        img.style.transform = "scale(1)"; // Reset zoom
+    };
+
+    
 
     const handleBuyNow = () => {
         window.location.href = 'https://www.foodbooking.com/api/fb/p_g_w3_d';
@@ -74,7 +95,7 @@ const Menu = () => {
                 <h2 style={{ textAlign: 'center' }}>Our Menu</h2>
             </div>
             
-            <div className="container pb-5">
+            {/*<div className="container pb-5">
                 <div className="menu-grid">
                     {menuItems.map((item, index) => (
                         <div className="menu-item" key={index}>
@@ -83,6 +104,31 @@ const Menu = () => {
                             <button className="btn btn-primary" onClick={handleBuyNow}>Order Now</button>
                         </div>
                     ))}
+                </div>
+            </div>*/}
+
+            <div className="container pb-5">
+                <div className="menu-images row">
+                    <div className="menu-image col-lg-6">
+                        <img 
+                            src={menuFront}
+                            alt="Menu Front"
+                            className="zoomable-image"
+                            onMouseMove={handleMouseMove}
+                            onMouseLeave={handleMouseLeave} 
+                            style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} 
+                        />
+                    </div>
+                    <div className="menu-image col-lg-6">
+                        <img 
+                            src={menuBack}
+                            alt="Menu Back"
+                            className="zoomable-image"
+                            onMouseMove={handleMouseMove}
+                            onMouseLeave={handleMouseLeave} 
+                            style={{ width: '100%', borderRadius: '8px' }} 
+                        />
+                    </div>
                 </div>
             </div>
 

@@ -22,11 +22,11 @@ body {
 }
 
 .deccani-head h1 {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 40px;
+    color: #fff;
+    font-size: 50px;
     letter-spacing: -3px;
     margin: 0;
+    text-transform: uppercase;
 }
 .deccani-head h1 b {
     color: #f4b420;
@@ -569,6 +569,11 @@ form.reservation-form textarea:focus {
     border-radius: 0;
     color: #fff;
     min-height: 365px;
+    transform: scale(1.0);
+    transition: transform 0.3s ease;
+}
+.service-item:hover {
+    transform: scale(1.1);
 }
   
   .service-icon img {
@@ -597,6 +602,19 @@ form.reservation-form textarea:focus {
     margin-top: 10px;
 }
 
+
+  
+  .menu-image {
+    position: relative;
+    overflow: hidden; /* Prevent zoomed content from overflowing */
+  }
+  
+  .zoomable-image {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+    cursor: zoom-in; /* Indicate zoom behavior */
+  }
 .share-buttons {
     display: flex;
     gap: 8px;

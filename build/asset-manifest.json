@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.124bc72c.css",
-    "main.js": "/static/js/main.be9dd968.js",
+    "main.css": "/static/css/main.f9e0b973.css",
+    "main.js": "/static/js/main.25d567ca.js",
     "static/js/453.e55345d8.chunk.js": "/static/js/453.e55345d8.chunk.js",
+    "static/media/menuback.jpg": "/static/media/menuback.c3d0a18285705f44ffb9.jpg",
+    "static/media/menufront.jpg": "/static/media/menufront.b693475586e49db98cd0.jpg",
     "static/media/menu-decani.pdf": "/static/media/menu-decani.9855c77192c912cee78b.pdf",
-    "static/media/banner2.png": "/static/media/banner2.d8a8c27a7296849959dd.png",
+    "static/media/banner4.png": "/static/media/banner4.b514a2863350bc1ce51f.png",
     "static/media/banner3.png": "/static/media/banner3.0a4d0f1254c5a4b0a556.png",
     "static/media/bg-breadcrumb.png": "/static/media/bg-breadcrumb.378bdc9e0985b53d2f27.png",
     "static/media/banner1.png": "/static/media/banner1.bdc705bf29db0ab1d28b.png",
@@ -21,12 +23,12 @@
     "static/media/cake.png": "/static/media/cake.ca850edeaae9a0b1e5da.png",
     "static/media/meeting.png": "/static/media/meeting.66be0d383a08acb51ca2.png",
     "index.html": "/index.html",
-    "main.124bc72c.css.map": "/static/css/main.124bc72c.css.map",
-    "main.be9dd968.js.map": "/static/js/main.be9dd968.js.map",
+    "main.f9e0b973.css.map": "/static/css/main.f9e0b973.css.map",
+    "main.25d567ca.js.map": "/static/js/main.25d567ca.js.map",
     "453.e55345d8.chunk.js.map": "/static/js/453.e55345d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.124bc72c.css",
-    "static/js/main.be9dd968.js"
+    "static/css/main.f9e0b973.css",
+    "static/js/main.25d567ca.js"
   ]
 }
